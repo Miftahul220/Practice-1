@@ -1,0 +1,91 @@
+*{
+  box-sizing: border-box;
+}
+.skills-Container{
+  width: 500px;
+ padding: 20px;
+  background-color: grey;
+ margin: 20px;
+  
+}
+
+.skills-Container li{
+  list-style-type: none;
+ 
+  margin: 50px 0;
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: relative;
+  
+}
+  
+.skills-Container li::before{
+  content:'';
+  position: absolute;
+  top: calc(100% + 10px);
+  background-color: rgb(170,167,173);
+  width: 100%;
+  height: 25px;
+  left: 0;
+  border-radius: 1000px ;
+}
+.skills-Container li::after{
+  content:'';
+  position: absolute;
+  top: calc(100% + 10px);
+  background-color: rgb(249,249,250);
+  width: 0;
+  left: 0;
+  height: 25px;
+  border-radius: 1000px;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: forward;
+}
+.skills-Container li.html::after{
+  animation-name:html;
+}
+@keyframes html{
+  to{
+  width:100%;
+  background-color: darkkhaki ;
+  }
+}
+.skills-Container li.css::after{
+  animation-name: css;
+}
+@keyframes css {
+  to{
+    width:90%;
+    background-color: darkkhaki;
+  }
+}
+.skills-Container li.js::after{
+  animation-name: js;
+}
+@keyframes js{
+  to{
+    width:80%;
+    background-color: burlywood;
+  }
+}
+.skills-Container li.booster::after{
+  animation-name: booster;
+}
+@keyframes booster {
+  to{
+    width: 60%;
+    background-color: darksalmon;
+  }
+}
+.skills-Container li.cpp::after{
+  animation-name: cpp;
+}
+@keyframes cpp{
+  to{
+    width: 70%;
+    background-color: darkorange;
+  }
+}
